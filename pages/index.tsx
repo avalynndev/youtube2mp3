@@ -8,10 +8,10 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Youtube to Mp3</title>
+        <title>Youtube2Mp3</title>
         <meta
           name="description"
-          content="A Youtube2Mp3 converting website. Made Using Next.js"
+          content="A website that converts Youtube videos into mp3 files. Made using Next.js"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

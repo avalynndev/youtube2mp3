@@ -1,5 +1,6 @@
 {
   "name": "youtube2mp3",
+  "description": "A website that converts Youtube videos into mp3 files. Made using Next.js",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +9,17 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avalynndev/youtube2mp3.git"
+  },
+  "keywords": [],
+  "author": "avalynndev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avalynndev/youtube2mp3/issues"
+  },
+  "homepage": "https://github.com/avalynndev/youtube2mp3#readme",
   "dependencies": {
     "@next/font": "13.1.1",
     "@types/node": "18.11.17",
