@@ -8,7 +8,7 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Youtube2Mp3</title>
+        <title>Youtube to Mp3</title>
         <meta
           name="description"
           content="A website that converts Youtube videos into mp3 files. Made using Next.js"
@@ -40,9 +40,8 @@ export default function Home() {
 
 function myFunction() {
   if (document.getElementById != null) {
-    let link = document.getElementById("youtubelink").value;
+    let link = (document.getElementById("youtubelink") as HTMLInputElement).value
     console.log(link);
-    document.getElementById("buttonApi").src =
-      "https://yt2mp3.co/api/button/mp3?url=" + link;
+    document.getElementById("buttonApi")!.setAttribute('src', "https://yt2mp3.co/api/button/mp3?url=" + link)
   }
 }
