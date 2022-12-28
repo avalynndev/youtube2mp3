@@ -29,8 +29,8 @@ export default function Home() {
         <iframe
           id="buttonApi"
           src=""
-          width="40%"
-          height="20%"
+          width="50%"
+          height="30%"
           allowTransparency={true}
         ></iframe>
       </main>
