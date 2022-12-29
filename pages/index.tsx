@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
+import {MdOpenInNew} from 'react-icons/md'
 
 export default function Home() {
   return (
@@ -14,8 +15,15 @@ export default function Home() {
           content="A website that converts Youtube videos into mp3 files. Made using Next.js"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
       <main>
+        <br/>
+        <div className="title">
+        <ul className="title">
+          <h1>Youtube To Mp3</h1>   
+        </ul>
+        </div>
         <input
           type="text"
           placeholder="Input your youtube url"
@@ -31,8 +39,21 @@ export default function Home() {
           src=""
           width="50%"
           height="30%"
-          allowTransparency={true}
         ></iframe>
+        <br />
+        <p>⚠️ | This website might malfunction on Android devices.</p>
+        <div className="container">
+        <ul className="github navbar-nav align-items-lg-center ml-lg-auto"> 
+          <li className="nav-item d-none d-lg-block ml-lg-4">
+            <a href="https://github.com/avalynndev/youtube2mp3" target="_blank" rel="noopener noreferrer" className="btn btn-neutral btn-icon">
+              <span className="nav-link-inner--text">Github</span>
+              <MdOpenInNew/>
+            </a>
+          </li>
+        </ul>
+        </div>
+        <br/>
+        <p>📄 | Visits: \visitorNum\ </p>
       </main>
     </>
   );

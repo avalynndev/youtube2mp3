@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poiret+One&family=Roboto:wght@100;300&display=swap');
 
 body {
   margin: 0;
@@ -28,6 +28,11 @@ body {
   font-weight: bolder;
 }
 
+p {
+  font-family: 'Indie Flower', cursive;
+  font-size: larger;
+}
+
 input {
   width: 50%;
   font-family: "Roboto", sans-serif;
@@ -54,6 +59,29 @@ button:hover {
   border-radius: 10px;
 }
 
+h1 {
+  font-family: 'Poiret One';
+}
+
+div.container {
+  text-align: center;
+}
+
+ul.github {
+  display: inline-block;
+  text-align: center;
+}
+
+div.title {
+  text-align: center;
+}
+
+ul.title {
+  display: inline-block;
+  text-align: center;
+}
+
+
 input:focus {
   border: 3px solid #555;
 }
@@ -65,4 +93,5 @@ iframe {
   overflow: hidden;
   min-height: 360px;
   height: 360px;
+  background-color: transparent;
 }
