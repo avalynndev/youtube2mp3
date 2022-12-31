@@ -3,7 +3,6 @@ import Head from "next/head";
 import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
-const youtubeMp3Converter = require('youtube-mp3-converter')
 
 export default function Home() {
   const [visit, setVisit] = useState(0);
@@ -72,9 +71,6 @@ function myFunction() {
     let link = (document.getElementById("youtubelink") as HTMLInputElement)
       .value;
     console.log(link);
-    const convertLinkToMp3 = youtubeMp3Converter('pathToSaveFiles')
-    const s = convertLinkToMp3('https://www.youtube.com/watch?v=_cyND_1y1k0')
-    
     document
       .getElementById("buttonApi")!
       .setAttribute("src", "https://yt2mp3.co/api/button/mp3?url=" + link);
