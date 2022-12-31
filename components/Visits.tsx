@@ -1,6 +1,6 @@
 import React from "react";
 
-const Footer = ({ visit }: any) => {
+const Visits = ({ visit }: any) => {
   return (
     <div>
       <p>📄Visits: {visit}</p>
@@ -8,4 +8,4 @@ const Footer = ({ visit }: any) => {
   );
 };
 
-export default Footer;
+export default Visits;

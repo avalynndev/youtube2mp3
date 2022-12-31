@@ -1,6 +1,6 @@
 import { MdOpenInNew } from "react-icons/md";
 import Head from "next/head";
-import Footer from "../components/Footer";
+import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
 
@@ -60,7 +60,7 @@ export default function Home() {
           </ul>
         </div>
         <br />
-        <Footer visit={visit} />
+        <Visits visit={visit} />
       </main>
     </>
   );
