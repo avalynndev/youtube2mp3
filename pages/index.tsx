@@ -41,6 +41,10 @@ export default function Home() {
           Convert
         </button>
         <br />
+        <button type="button" onClick={myFunction} id="download">
+          Convert
+        </button>
+        <br/>
         <iframe id="buttonApi" src="" width="50%" height="30%"></iframe>
         <br />
         <p>⚠️ | This website might malfunction on Android devices.</p>
@@ -66,11 +70,40 @@ export default function Home() {
   );
 }
 
+
 function myFunction() {
+  const http = require("https");
+  let link = (document.getElementById("youtubelink") as HTMLInputElement).value;
+
+  const options = {
+    method: "GET",
+    hostname: "youtube-mp3-download1.p.rapidapi.com",
+    port: null,
+    path: `/dl?id=UxxajLWwzqY`,
+    headers: {
+      "X-RapidAPI-Key": "145b0a05acmsh54ea0d5c8914ea6p1a61c5jsn80e2478712ef",
+      "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
+      useQueryString: true,
+    },
+  };
+
+  const req = http.request(options, function (res: any) {
+    const chunks: any = [];
+
+    res.on("data", function (chunk: any) {
+      chunks.push(chunk);
+    });
+
+    res.on("end", function () {
+      const body = JSON.parse(chunks);
+      console.log(body.link);
+    });
+  });
+
+  req.end();
   if (document.getElementById != null) {
     let link = (document.getElementById("youtubelink") as HTMLInputElement)
       .value;
-    console.log(link);
     document
       .getElementById("buttonApi")!
       .setAttribute("src", "https://yt2mp3.co/api/button/mp3?url=" + link);
