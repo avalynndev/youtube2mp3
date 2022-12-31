@@ -13,7 +13,6 @@ export default function Home() {
   }, []);
   return (
     <>
-    
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

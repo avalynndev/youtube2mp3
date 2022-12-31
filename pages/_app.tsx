@@ -5,15 +5,9 @@ import { useEffect, useState } from "react";
 import countapi from "countapi-js";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [visit, setVisit] = useState(0);
-  useEffect(() => {
-    countapi.update("yt2mp3", "visits", 1).then((result) => {
-      setVisit(result.value);
-    });
-  }, []);
+
   return (
     <>
-      <Footer visit={visit} />
       <Component {...pageProps} />
     </>
   );
