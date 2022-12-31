@@ -1,7 +1,7 @@
 import { MdOpenInNew } from "react-icons/md";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({visitorNum}: any) {
   return (
     <>
       <Head>
@@ -51,7 +51,7 @@ export default function Home() {
           </ul>
         </div>
         <br />
-        <p>📄 | Visits: \visitorNum\ </p>
+        <p>📄 | Visits: {visitorNum} </p>
       </main>
     </>
   );

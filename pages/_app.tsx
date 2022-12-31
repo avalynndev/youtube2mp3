@@ -1,11 +1,13 @@
 import "../styles/main.css";
 import type { AppProps } from "next/app";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
+import countapi from "countapi-js";
 
 export default function App({ Component, pageProps }: AppProps) {
+  const [visitorNum, setVisit] = useState(0);
   const router = useRouter();
   useEffect(() => {
     const handleRouteChange = (url: any) => {
@@ -18,7 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
       router.events.off("hashChangeComplete", handleRouteChange);
     };
   }, [router.events]);
-
+  useEffect(() => {
+    countapi.update("yt2mp3", 'visits', 1).then((result) => {
+      setVisit(result.value);
+    });
+  }, []);
   return (
     <>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
