@@ -60,7 +60,6 @@ export default function Home() {
           </ul>
         </div>
         <br />
-        <p>📄 Visits: </p>
         <Footer visit={visit} />
       </main>
     </>
