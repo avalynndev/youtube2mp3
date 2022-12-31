@@ -1,9 +1,19 @@
 import { MdOpenInNew } from "react-icons/md";
 import Head from "next/head";
+import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
+import countapi from "countapi-js";
 
-export default function Home({ visit }: any) {
+export default function Home() {
+  const [visit, setVisit] = useState(0);
+  useEffect(() => {
+    countapi.update("yt2mp3", "visits", 1).then((result) => {
+      setVisit(result.value);
+    });
+  }, []);
   return (
     <>
+    
       <Head>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -51,7 +61,8 @@ export default function Home({ visit }: any) {
           </ul>
         </div>
         <br />
-        <p>📄 | Visits: {visit} </p>
+        <p>📄 Visits: </p>
+        <Footer visit={visit} />
       </main>
     </>
   );
