@@ -1,6 +1,5 @@
+import { MdOpenInNew } from "react-icons/md";
 import Head from "next/head";
-import { Inter } from "@next/font/google";
-import {MdOpenInNew} from 'react-icons/md'
 
 export default function Home() {
   return (
@@ -15,14 +14,13 @@ export default function Home() {
           content="A website that converts Youtube videos into mp3 files. Made using Next.js"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
       <main>
-        <br/>
+        <br />
         <div className="title">
-        <ul className="title">
-          <h1>Youtube To Mp3</h1>   
-        </ul>
+          <ul className="title">
+            <h1>Youtube To Mp3</h1>
+          </ul>
         </div>
         <input
           type="text"
@@ -34,35 +32,40 @@ export default function Home() {
           Convert
         </button>
         <br />
-        <iframe
-          id="buttonApi"
-          src=""
-          width="50%"
-          height="30%"
-        ></iframe>
+        <iframe id="buttonApi" src="" width="50%" height="30%"></iframe>
         <br />
         <p>⚠️ | This website might malfunction on Android devices.</p>
         <div className="container">
-        <ul className="github navbar-nav align-items-lg-center ml-lg-auto"> 
-          <li className="nav-item d-none d-lg-block ml-lg-4">
-            <a href="https://github.com/avalynndev/youtube2mp3" target="_blank" rel="noopener noreferrer" className="btn btn-neutral btn-icon">
-              <span className="nav-link-inner--text">Github</span>
-              <MdOpenInNew/>
-            </a>
-          </li>
-        </ul>
+          <ul className="github navbar-nav align-items-lg-center ml-lg-auto">
+            <li className="nav-item d-none d-lg-block ml-lg-4">
+              <a
+                href="https://github.com/avalynndev/youtube2mp3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-neutral btn-icon"
+              >
+                <span className="nav-link-inner--text">Github</span>
+                <MdOpenInNew />
+              </a>
+            </li>
+          </ul>
         </div>
-        <br/>
+        <br />
         <p>📄 | Visits: \visitorNum\ </p>
       </main>
     </>
   );
 }
 
+
+
 function myFunction() {
   if (document.getElementById != null) {
-    let link = (document.getElementById("youtubelink") as HTMLInputElement).value
+    let link = (document.getElementById("youtubelink") as HTMLInputElement)
+      .value;
     console.log(link);
-    document.getElementById("buttonApi")!.setAttribute('src', "https://yt2mp3.co/api/button/mp3?url=" + link)
+    document
+      .getElementById("buttonApi")!
+      .setAttribute("src", "https://yt2mp3.co/api/button/mp3?url=" + link);
   }
 }
