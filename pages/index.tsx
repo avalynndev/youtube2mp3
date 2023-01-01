@@ -28,26 +28,23 @@ export default function Home() {
         <br />
         <div className="title">
           <ul className="title">
+            <img src="/website_icon.png"  width="86" height="86" />
             <h1>Youtube To Mp3</h1>
+            <h4>Enter only the video ID not the URL.</h4>
           </ul>
         </div>
         <input
           type="text"
-          placeholder="Input your youtube url"
+          placeholder="Input your youtube video id"
           name="URL"
-          id="youtubelink"
+          id="youtubeid"
         />
-        <button type="button" onClick={myFunction} id="download">
-          Convert
+        <button type="button" onClick={myFunction} id="button">
+          Download
         </button>
         <br />
-        <button type="button" onClick={myFunction} id="download">
-          Convert
-        </button>
-        <br/>
-        <iframe id="buttonApi" src="" width="50%" height="30%"></iframe>
-        <br />
-        <p>⚠️ | This website might malfunction on Android devices.</p>
+        <p>⚠️ This website might malfunction due to API issues, just reload the page to solve it. If it doesn't work, read the docs</p>
+        <Visits visit={visit} />
         <div className="container">
           <ul className="github navbar-nav align-items-lg-center ml-lg-auto">
             <li className="nav-item d-none d-lg-block ml-lg-4">
@@ -62,50 +59,62 @@ export default function Home() {
               </a>
             </li>
           </ul>
+          <ul className="github navbar-nav align-items-lg-center ml-lg-auto">
+            <li className="nav-item d-none d-lg-block ml-lg-4">
+              <a
+                href="https://github.com/avalynndev/youtube2mp3/wiki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-neutral btn-icon"
+              >
+                <span className="nav-link-inner--text">Docs</span>
+                <MdOpenInNew />
+              </a>
+            </li>
+          </ul>
         </div>
         <br />
-        <Visits visit={visit} />
       </main>
     </>
   );
 }
 
-
 function myFunction() {
   const http = require("https");
-  let link = (document.getElementById("youtubelink") as HTMLInputElement).value;
 
-  const options = {
-    method: "GET",
-    hostname: "youtube-mp3-download1.p.rapidapi.com",
-    port: null,
-    path: `/dl?id=UxxajLWwzqY`,
-    headers: {
-      "X-RapidAPI-Key": "145b0a05acmsh54ea0d5c8914ea6p1a61c5jsn80e2478712ef",
-      "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
-      useQueryString: true,
-    },
-  };
+  let link = (document.getElementById("youtubeid") as HTMLInputElement).value;
+  if (link == "") {
+    alert(
+      "Please Enter a Valid Youtube ID. Don't include https://youtube.com/watch?v=. Only use the video's ID. If you did enter a Valid ID, it might be due to API issues, just reload the page to solve it. If it doesn't work, read the docs"
+    );
+  } else {
+    const options = {
+      method: "GET",
+      hostname: "youtube-mp3-download1.p.rapidapi.com",
+      port: null,
+      path: `/dl?id=${link}`,
+      headers: {
+        "X-RapidAPI-Key": "145b0a05acmsh54ea0d5c8914ea6p1a61c5jsn80e2478712ef",
+        "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
+        useQueryString: true,
+      },
+    };
 
-  const req = http.request(options, function (res: any) {
-    const chunks: any = [];
+    const req = http.request(options, function (res: any) {
+      const chunks: any = [];
 
-    res.on("data", function (chunk: any) {
-      chunks.push(chunk);
+      res.on("data", function (chunk: any) {
+        chunks.push(chunk);
+      });
+
+      res.on("end", function () {
+        const body = JSON.parse(chunks);
+        console.log(body.link);
+        const DownloadURL = body.link;
+        window.open(DownloadURL, "_blank");
+      });
     });
 
-    res.on("end", function () {
-      const body = JSON.parse(chunks);
-      console.log(body.link);
-    });
-  });
-
-  req.end();
-  if (document.getElementById != null) {
-    let link = (document.getElementById("youtubelink") as HTMLInputElement)
-      .value;
-    document
-      .getElementById("buttonApi")!
-      .setAttribute("src", "https://yt2mp3.co/api/button/mp3?url=" + link);
+    req.end();
   }
 }

@@ -13,9 +13,9 @@ body {
   background-repeat: no-repeat;
 }
 
-#download {
-  background-color: #7cffcb;
-  background-image: linear-gradient(315deg, #65cea4 0%, #51a890 74%);
+#button {
+  background-color: #87ceeb;
+  background-image: linear-gradient(315deg, #87ceeb 0%, #408fae 74%);
   border: none;
   color: white;
   padding: 19px 30px;
@@ -27,6 +27,15 @@ body {
   cursor: pointer;
   border-radius: 5px;
   font-weight: bolder;
+}
+
+h4 {
+  font-family: "Indie Flower", cursive;
+  color: #f47174;
+}
+
+img {
+  vertical-align: middle;
 }
 
 p {
