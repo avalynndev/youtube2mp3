@@ -31,6 +31,7 @@ export default function Home() {
             <img src="/website_icon.png"  width="86" height="86" />
             <h1>Youtube To Mp3</h1>
             <h4>Enter only the video ID not the URL.</h4>
+            <img src="/example.png" />
           </ul>
         </div>
         <input
