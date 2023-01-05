@@ -44,6 +44,12 @@ export default function Home() {
           Download
         </button>
         <br />
+        <div className="title">
+          <ul className="title">
+            <h4>Example:- </h4>
+            <img src="/example.png" />
+          </ul>
+        </div>
         <p>⚠️ This website might malfunction due to API issues, just reload the page to solve it. If it doesn't work, read the docs</p>
         <Visits visit={visit} />
         <div className="container">
