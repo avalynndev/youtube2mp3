@@ -9,6 +9,7 @@ export default function Home() {
   useEffect(() => {
     countapi.update("yt2mp3", "visits", 1).then((result) => {
       setVisit(result.value);
+      console.log(result.value)
     });
   }, []);
   return (
