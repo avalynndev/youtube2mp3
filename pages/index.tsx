@@ -30,7 +30,6 @@ export default function Home() {
           <ul className="title">
             <img src="/website_icon.png"  width="86" height="86" />
             <h1>Youtube To Mp3</h1>
-            <h4>Enter only the video ID not the URL.</h4>
           </ul>
         </div>
         <input
@@ -45,7 +44,8 @@ export default function Home() {
         <br />
         <div className="title">
           <ul className="title">
-            <h4>Example:- </h4>
+            <h1>Example:- </h1>
+            <h4>Enter only the video ID not the URL.</h4>
             <img src="/example.png" />
           </ul>
         </div>
@@ -61,19 +61,6 @@ export default function Home() {
                 className="btn btn-neutral btn-icon"
               >
                 <span className="nav-link-inner--text">Github</span>
-                <MdOpenInNew />
-              </a>
-            </li>
-          </ul>
-          <ul className="github navbar-nav align-items-lg-center ml-lg-auto">
-            <li className="nav-item d-none d-lg-block ml-lg-4">
-              <a
-                href="https://github.com/avalynndev/youtube2mp3/wiki"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-neutral btn-icon"
-              >
-                <span className="nav-link-inner--text">Docs</span>
                 <MdOpenInNew />
               </a>
             </li>
