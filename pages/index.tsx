@@ -7,7 +7,7 @@ import countapi from "countapi-js";
 export default function Home() {
   const [visit, setVisit] = useState(0);
   useEffect(() => {
-    countapi.update("yt2mp3", "visits", 1).then((result) => {
+    countapi.update("yt2mp3", "visits", 1).then(({result}: any) => {
       setVisit(result.value);
     });
   }, []);
