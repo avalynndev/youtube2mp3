@@ -1,5 +1,7 @@
 import { MdOpenInNew } from "react-icons/md";
 import Head from "next/head";
+import HeroSection from "../components/HeroSection";
+import Navbar from "../components/Navbar";
 import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
@@ -24,6 +26,8 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
+			<HeroSection />
       <main>
         <br />
         <div className="title">

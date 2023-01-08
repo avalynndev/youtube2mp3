@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/avalynndev/youtube2mp3#readme",
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.1",
     "@types/react-dom": "18.0.10",
     "countapi-js": "^1.0.2",
@@ -28,11 +29,13 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
+    "tailwindcss": "^3.2.4",
     "typescript": "4.9.4"
   }
 }
