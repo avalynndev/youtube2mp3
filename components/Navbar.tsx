@@ -130,7 +130,7 @@ function Navbar() {
 					leaveFrom="opacity-100 scale-100"
 					leaveTo="opacity-0 scale-95"
 				>
-					{(ref) => (
+					{(ref:any) => (
 						<div className="md:hidden" id="mobile-menu">
 							<div
 								ref={ref}
