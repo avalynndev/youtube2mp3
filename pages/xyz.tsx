@@ -1,4 +1,5 @@
 import Head from "next/head";
+import "../styles/main.css";
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 
