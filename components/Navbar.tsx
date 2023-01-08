@@ -39,7 +39,6 @@ function Navbar() {
                   >
                     Mp3 Croping
                   </Link>
-
                   <Link
                     activeClass="contact"
                     to="contact"

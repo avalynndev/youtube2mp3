@@ -9,7 +9,6 @@ function HeroSection() {
       </h1>
       <form>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
-          <div className="mb-6">
             <input
               type="text"
               id="first_name"
@@ -17,7 +16,6 @@ function HeroSection() {
               placeholder=""
               required
             />
-          </div>
         </div>
         <button
           type="submit"
