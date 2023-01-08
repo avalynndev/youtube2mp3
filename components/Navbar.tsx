@@ -12,7 +12,7 @@ function Navbar() {
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center  mx-20  justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
-                <img src="/website_icon.png" width="40" height="40" />
+                <img src="/website_icon.png" width="35" height="35" />
                 <h1 className=" font-bold text-xl cursor-pointer">
                   Youtube2<span className="text-blue-500">mp3</span>
                 </h1>
@@ -37,28 +37,7 @@ function Navbar() {
                     duration={500}
                     className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    About
-                  </Link>
-                  <Link
-                    activeClass="work"
-                    to="work"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Projects
-                  </Link>
-
-                  <Link
-                    activeClass="Services"
-                    to="work"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
-                    className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Services
+                    Mp3 Croping
                   </Link>
 
                   <Link
