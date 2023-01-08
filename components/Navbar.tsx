@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { Link } from "react-scroll";
+
 import Image from "next/image";
 
 function Navbar() {
@@ -19,36 +19,24 @@ function Navbar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
-                  <Link
-                    activeClass="Home"
-                    to="about"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  <a
+                    href="/"
                     className="cursor-pointer text-blue-600 font-semibold px-3 py-2 text-md hover:font-black"
                   >
                     Home
-                  </Link>
-                  <Link
-                    activeClass="about"
-                    to="about"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  </a>
+                  <a
+                    href="cropmp3"
                     className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Mp3 Croping
-                  </Link>
-                  <Link
-                    activeClass="contact"
-                    to="contact"
-                    smooth={true}
-                    offset={50}
-                    duration={500}
+                  </a>
+                  <a
+                    href="https://github.com/avalynndev/youtube2mp3"
                     className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
                   >
-                    Contact
-                  </Link>
+                    Github 
+                  </a>
                 </div>
               </div>
             </div>
@@ -114,63 +102,24 @@ function Navbar() {
                 ref={ref}
                 className="bg-white px-2 pt-2 pb-3 space-y-1 sm:px-3"
               >
-                <Link
+                <a
                   href="/home"
-                  activeClass="home"
-                  to="home"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Home
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/about"
-                  activeClass="about"
-                  to="about"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   About
-                </Link>
-
-                <Link
-                  href="/work"
-                  activeClass="work"
-                  to="work"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
+                </a>
+                <a
+                  href="https://github.com/avalynndev/youtube2mp3"
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Projects
-                </Link>
-                <Link
-                  href="/services"
-                  activeClass="services"
-                  to="services"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Services
-                </Link>
-
-                <Link
-                  href="/contact"
-                  activeClass="work"
-                  to="work"
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Contact
-                </Link>
+                  Github
+                </a>
               </div>
             </div>
           )}

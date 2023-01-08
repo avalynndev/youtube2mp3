@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f9fafb;
+  background-image: linear-gradient(315deg, #f9fafb 0%, #f9fafb 74%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+p {
+  font-family: "Indie Flower", cursive;
+  font-size: larger;
+}
+
 #button {
   background-color: #87ceeb;
   background-image: linear-gradient(315deg, #87ceeb 0%, #408fae 74%);
@@ -19,22 +36,28 @@
 }
 
 input {
-    width: 50%;
-    font-family: "Roboto", sans-serif;
-    font-size: 2px;
-    padding: 16px 30px;
-    margin: 30px 10px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  input[type="text"] {
-    font-size: 24px;
-  }
-  
-  input::placeholder {
-    font: 22px/3;
-    font-family: "Roboto", sans-serif;
-  }
+  width: 50%;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  padding: 16px 30px;
+  margin: 30px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 800px;
+}
+
+input[type="text"] {
+  font-size: 24px;
+  background-color: #374151;
+}
+
+input, select, textarea{
+  color: white;
+}
+
+input::placeholder {
+  font: 22px/3;
+  font-family: "Roboto", sans-serif;
+}

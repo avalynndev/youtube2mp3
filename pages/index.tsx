@@ -1,8 +1,10 @@
-import { MdOpenInNew } from "react-icons/md";
 import Head from "next/head";
+import Navbar from "../components/Navbar";
+import { MdOpenInNew } from "react-icons/md";
 import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
+
 
 export default function Home() {
   const [visit, setVisit] = useState(0);
@@ -14,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charSet="UTF-8" />
+      <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Youtube to Mp3</title>
@@ -24,7 +26,13 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <Navbar />
+      <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
+      <h1 className="text-gray-900 pb-10">
+       Enter only the <span className="text-red-400">Video ID</span> Not the{" "}
+        <span className="text-red-400">URL</span>
+      </h1>
+      <div>
         <input
           type="text"
           placeholder="Input your youtube video id"
@@ -34,32 +42,10 @@ export default function Home() {
         <button type="button" onClick={myFunction} id="button">
           Download
         </button>
-        <br />
-        <div className="title">
-          <ul className="title">
-            <h1>Example:- </h1>
-            <h4>Enter only the video ID not the URL.</h4>
-            <img src="/example.png" />
-          </ul>
-        </div>
-        <p>⚠️ This website might malfunction due to API issues, just reload the page to solve it. If it doesn't work, read the docs</p>
+      </div>
+    </div>
+      <main>
         <Visits visit={visit} />
-        <div className="container">
-          <ul className="github navbar-nav align-items-lg-center ml-lg-auto">
-            <li className="nav-item d-none d-lg-block ml-lg-4">
-              <a
-                href="https://github.com/avalynndev/youtube2mp3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-neutral btn-icon"
-              >
-                <span className="nav-link-inner--text">Github</span>
-                <MdOpenInNew />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <br />
       </main>
     </>
   );
@@ -71,9 +57,10 @@ function myFunction() {
   let link = (document.getElementById("youtubeid") as HTMLInputElement).value;
   if (link == "") {
     alert(
-      "Please Enter a Valid Youtube ID. Don't include https://youtube.com/watch?v=. Only use the video's ID. If you did enter a Valid ID, it might be due to API issues, just reload the page to solve it. If it doesn't work, read the docs"
+      "Please Enter a Valid Youtube ID."
     );
   } else {
+    console.log(link)
     const options = {
       method: "GET",
       hostname: "youtube-mp3-download1.p.rapidapi.com",
@@ -95,7 +82,6 @@ function myFunction() {
 
       res.on("end", function () {
         const body = JSON.parse(chunks);
-        console.log(body.link);
         const DownloadURL = body.link;
         window.open(DownloadURL, "_blank");
       });
