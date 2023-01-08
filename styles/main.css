@@ -34,7 +34,6 @@ abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
-h1,
 h2,
 h3,
 h5,
@@ -115,10 +114,8 @@ blockquote,
 dd,
 dl,
 figure,
-h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 hr,
