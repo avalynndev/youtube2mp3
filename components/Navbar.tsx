@@ -12,8 +12,8 @@ function Navbar() {
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center  mx-20  justify-between w-full">
               <div className="flex justify-center items-center flex-shrink-0 ">
+                <img src="/website_icon.png" />
                 <h1 className=" font-bold text-xl cursor-pointer">
-                  <img src="/website_icon.png" width="86" height="86" />
                   Youtube2<span className="text-blue-500">mp3</span>
                 </h1>
               </div>
