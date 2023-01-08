@@ -61,3 +61,13 @@ input::placeholder {
   font: 22px/3;
   font-family: "Roboto", sans-serif;
 }
+
+iframe {
+  border-radius: 10px;
+  scroll-behavior: none;
+  border: none;
+  overflow: hidden;
+  min-height: 360px;
+  height: 360px;
+  background-color: transparent;
+}
