@@ -53,7 +53,9 @@ input[type="text"] {
   background-color: #374151;
 }
 
-input, select, textarea{
+input,
+select,
+textarea {
   color: white;
 }
 
@@ -67,7 +69,5 @@ iframe {
   scroll-behavior: none;
   border: none;
   overflow: hidden;
-  min-height: 360px;
-  height: 360px;
   background-color: transparent;
 }

@@ -29,7 +29,7 @@ export default function Home() {
       <main>
         <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
           <h1 className="text-gray-900 pb-10">
-          Trim or cut any audio file {" "}
+            Trim or cut any audio file{" "}
             <span className="text-blue-500">online</span>
           </h1>
         </div>

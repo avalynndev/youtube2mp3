@@ -29,8 +29,8 @@ export default function Home() {
       <Navbar />
       <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
       <h1 className="text-gray-900 pb-10">
-       Enter only the <span className="text-red-400">Video ID</span> Not the{" "}
-        <span className="text-red-400">URL</span>
+       Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
+        <span className="text-blue-400">Audio </span>
       </h1>
       <div>
         <input
