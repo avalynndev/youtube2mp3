@@ -1,6 +1,16 @@
 import React from "react";
+import Visits from "../components/Visits";
 import Navbar from "../components/Navbar";
+import { useEffect, useState } from "react";
+import countapi from "countapi-js";
+
 export default function Home() {
+  const [visit, setVisit] = useState(0);
+  useEffect(() => {
+    countapi.update("mp3crop-yt", "visits", 1).then((result) => {
+      setVisit(result.value);
+    });
+  }, []);
   return (
     <>
       <Navbar />
@@ -13,6 +23,8 @@ export default function Home() {
           <h1 className="text-center">Let's start 🚀 </h1>
         </div>
       </div>
+      <br/>
+      <Visits visit={visit} />
     </>
   );
 }
