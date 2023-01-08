@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
 
-export default function Home() {
+export default function audioCutter() {
   const [visit, setVisit] = useState(0);
   useEffect(() => {
     countapi.update("mp3crop-yt", "visits", 1).then((result) => {

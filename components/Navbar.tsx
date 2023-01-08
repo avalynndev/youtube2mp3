@@ -26,7 +26,7 @@ function Navbar() {
                     Home
                   </a>
                   <a
-                    href="audiocutter"
+                    href="audioCutter"
                     className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Audio Cutter
@@ -115,7 +115,7 @@ function Navbar() {
                   Home
                 </a>
                 <a
-                  href="/audiocutter"
+                  href="/audioCutter"
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Audio Cutter
