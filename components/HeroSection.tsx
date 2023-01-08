@@ -16,6 +16,9 @@ function HeroSection() {
               placeholder=""
               required
             />
+			<button type="button" id="button">
+          Download
+        </button>
         </div>
         <button
           type="submit"
@@ -24,6 +27,15 @@ function HeroSection() {
           Submit
         </button>
       </form>
+	  <input
+          type="text"
+          placeholder="Input your youtube video id"
+          name="URL"
+          id="youtubeid"
+        />
+        <button type="button" id="button">
+          Download
+        </button>
       <a href="">
         <div className="flex justify-center items-center cursor-pointer hover:shadow-lg  text-3xl font-semibold text-white bg-gray-900 rounded-lg w-64 h-16">
           <h1 className="text-center">Download🔻</h1>

@@ -25,13 +25,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <br />
-        <div className="title">
-          <ul className="title">
-            <img src="/website_icon.png"  width="86" height="86" />
-            <h1>Youtube To Mp3</h1>
-          </ul>
-        </div>
         <input
           type="text"
           placeholder="Input your youtube video id"
