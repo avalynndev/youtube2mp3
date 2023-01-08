@@ -8,9 +8,10 @@ function HeroSection() {
 				Responsive Navbar using <span className="text-blue-500">Next.js</span> &{" "}
 				<span className="text-blue-400">Tailwind</span>
 			</h1>
-			<div className="flex justify-center items-center cursor-pointer hover:shadow-lg  text-3xl font-semibold text-white bg-gray-900 rounded-lg w-64 h-16">
-				<h1 className="text-center">Let's start 🚀 </h1>
+			<a href=""><div className="flex justify-center items-center cursor-pointer hover:shadow-lg  text-3xl font-semibold text-white bg-gray-900 rounded-lg w-64 h-16">
+				<h1 className="text-center">Github 🚀 </h1>
 			</div>
+			</a>
 		</div>
 	);
 }
