@@ -38,10 +38,10 @@ function Navbar() {
                     Media Info
                   </a>
                   <a
-                    href="https://github.com/avalynndev/youtube2mp3"
+                    href="/youtube2mp3"
                     className="cursor-pointer bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
                   >
-                    Github
+                    Alternative
                   </a>
                 </div>
               </div>
@@ -128,10 +128,10 @@ function Navbar() {
                   Media Info
                 </a>
                 <a
-                  href="https://github.com/avalynndev/youtube2mp3"
+                  href="/youtube2mp3"
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Github
+                  Alternative
                 </a>
               </div>
             </div>

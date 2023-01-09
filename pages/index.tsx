@@ -4,6 +4,9 @@ import { MdOpenInNew } from "react-icons/md";
 import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Home() {
   const [visit, setVisit] = useState(0);
@@ -12,6 +15,7 @@ export default function Home() {
       setVisit(result.value);
     });
   }, []);
+  const myFunction = () => toast.info(`Not Working? Taking too long? Go check out the alternative on the top-right corner.`);
   return (
     <>
       <Head>
@@ -24,39 +28,51 @@ export default function Home() {
           content="A website that converts Youtube videos into mp3 files. Made using Next.js"
         />
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
       <Navbar />
       <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
-      <h1 className="text-gray-900 pb-10">
-       Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
-        <span className="text-blue-400">Audio </span>
-      </h1>
+        <h1 className="text-gray-900 pb-10">
+          Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
+          <span className="text-blue-400">Audio </span>
+        </h1>
       </div>
       <main>
-        <br/>
-      <div>
-        <input
-          type="text"
-          placeholder="Input your youtube video url"
-          name="URL"
-          id="youtubelink"
+        <ToastContainer
+          position="bottom-left"
+          autoClose={50000}
+          hideProgressBar
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
         />
-        <button type="button" onClick={myFunction} id="button">
-          Download
-        </button>
-      </div>
+        <br />
+        <div>
+          <input
+            type="text"
+            placeholder="Input your youtube video url"
+            name="URL"
+            id="youtubelink"
+          />
+          <button type="button" onClick={myFunction} id="button">
+            Download
+          </button>
+        </div>
         <center>
-        <br />
-        <iframe
-          id="buttonApi"
-          src=""
-          width="50%"
-          height="30%"
-        ></iframe>
-        <br />
+          <br />
+          <iframe
+            id="buttonApi"
+            src=""
+            width="50%"
+            height="30%"
+          ></iframe>
+          <br />
         </center>
         <Visits visit={visit} />
+        <br /><br />
       </main>
     </>
   );
