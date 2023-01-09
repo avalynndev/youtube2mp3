@@ -1,7 +1,9 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
-import {MdOpenInNew} from 'react-icons/md'
 import Navbar from "../components/Navbar";
+import { MdOpenInNew } from "react-icons/md";
+import Visits from "../components/Visits";
+import { useEffect, useState } from "react";
+import countapi from "countapi-js";
 
 export default function Home() {
   const [visit, setVisit] = useState(0);
@@ -27,7 +29,7 @@ export default function Home() {
       <Navbar />
       <main>
       <h1 className="text-gray-900 pb-10">
-       Alternative to the<span className="text-blue-500">Youtube Video</span> to{" "}
+       Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
         <span className="text-blue-400">Audio </span>
       </h1>
         <br/>
