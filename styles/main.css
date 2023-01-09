@@ -68,6 +68,7 @@ iframe {
   border-radius: 10px;
   scroll-behavior: none;
   border: none;
+  display: block;
   overflow: hidden;
   background-color: transparent;
 }
