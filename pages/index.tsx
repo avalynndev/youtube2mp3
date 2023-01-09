@@ -46,6 +46,7 @@ export default function Home() {
           Download
         </button>
       </div>
+        <center>
         <br />
         <iframe
           id="buttonApi"
@@ -54,6 +55,7 @@ export default function Home() {
           height="30%"
         ></iframe>
         <br />
+        </center>
         <Visits visit={visit} />
       </main>
     </>
