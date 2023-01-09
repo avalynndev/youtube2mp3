@@ -1,10 +1,7 @@
 import Head from "next/head";
+import { Inter } from "@next/font/google";
+import {MdOpenInNew} from 'react-icons/md'
 import Navbar from "../components/Navbar";
-import { MdOpenInNew } from "react-icons/md";
-import Visits from "../components/Visits";
-import { useEffect, useState } from "react";
-import countapi from "countapi-js";
-
 
 export default function Home() {
   const [visit, setVisit] = useState(0);
@@ -16,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-      <meta charSet="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Youtube to Mp3</title>
@@ -25,13 +22,15 @@ export default function Home() {
           content="A website that converts Youtube videos into mp3 files. Made using Next.js"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
       <Navbar />
-      <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
+      <main>
       <h1 className="text-gray-900 pb-10">
-       Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
+       Alternative to the<span className="text-blue-500">Youtube Video</span> to{" "}
         <span className="text-blue-400">Audio </span>
       </h1>
+        <br/>
       <div>
         <input
           type="text"
@@ -43,8 +42,14 @@ export default function Home() {
           Download
         </button>
       </div>
-    </div>
-      <main>
+        <br />
+        <iframe
+          id="buttonApi"
+          src=""
+          width="50%"
+          height="30%"
+        ></iframe>
+        <br />
         <Visits visit={visit} />
       </main>
     </>
@@ -52,41 +57,10 @@ export default function Home() {
 }
 
 function myFunction() {
-  const http = require("https");
-
-  let link = (document.getElementById("youtubeid") as HTMLInputElement).value;
-  if (link == "") {
-    alert(
-      "Please Enter a Valid Youtube ID."
-    );
-  } else {
-    console.log(link)
-    const options = {
-      method: "GET",
-      hostname: "youtube-mp3-download1.p.rapidapi.com",
-      port: null,
-      path: `/dl?id=${link}`,
-      headers: {
-        "X-RapidAPI-Key": "145b0a05acmsh54ea0d5c8914ea6p1a61c5jsn80e2478712ef",
-        "X-RapidAPI-Host": "youtube-mp3-download1.p.rapidapi.com",
-        useQueryString: true,
-      },
-    };
-
-    const req = http.request(options, function (res: any) {
-      const chunks: any = [];
-
-      res.on("data", function (chunk: any) {
-        chunks.push(chunk);
-      });
-
-      res.on("end", function () {
-        const body = JSON.parse(chunks);
-        const DownloadURL = body.link;
-        window.open(DownloadURL, "_blank");
-      });
-    });
-
-    req.end();
+  if (document.getElementById != null) {
+    let link = (document.getElementById("youtubelink") as HTMLInputElement).value
+    console.log(link);
+    document.getElementById("buttonApi")!.setAttribute('src', "https://yt2mp3.co/api/button/mp3?url=" + link)
   }
 }
+
