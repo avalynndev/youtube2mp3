@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
 import {MdOpenInNew} from 'react-icons/md'
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -17,22 +18,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
+      <Navbar />
       <main>
         <br/>
-        <div className="title">
-        <ul className="title">
-          <h1>Youtube To Mp3</h1>   
-        </ul>
-        </div>
+      <div>
         <input
           type="text"
-          placeholder="Input your youtube url"
+          placeholder="Input your youtube video id"
           name="URL"
-          id="youtubelink"
+          id="youtubeid"
         />
-        <button type="button" onClick={myFunction} id="download">
-          Convert
+        <button type="button" onClick={myFunction} id="button">
+          Download
         </button>
+      </div>
         <br />
         <iframe
           id="buttonApi"
