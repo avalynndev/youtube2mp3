@@ -27,11 +27,11 @@ export default function Home() {
         <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
       <Navbar />
-      <main>
       <h1 className="text-gray-900 pb-10">
        Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
         <span className="text-blue-400">Audio </span>
       </h1>
+      <main>
         <br/>
       <div>
         <input
