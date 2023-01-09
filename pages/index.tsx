@@ -27,18 +27,20 @@ export default function Home() {
         <link href="https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0" rel="stylesheet" />
       </Head>
       <Navbar />
+      <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
       <h1 className="text-gray-900 pb-10">
        Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
         <span className="text-blue-400">Audio </span>
       </h1>
+      </div>
       <main>
         <br/>
       <div>
         <input
           type="text"
-          placeholder="Input your youtube video id"
+          placeholder="Input your youtube video url"
           name="URL"
-          id="youtubeid"
+          id="youtubelink"
         />
         <button type="button" onClick={myFunction} id="button">
           Download
