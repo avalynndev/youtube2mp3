@@ -10,7 +10,7 @@
     "make": "electron-forge make --out=dist/win --platform=win32 --arch=x64 app-version=1.0 --icon=src/assets/images/favicon.ico",
     "publish": "electron-forge publish",
     "pack:win32": "electron-packager . yt2mp3 --out=dist/win --platform=win32 --arch=ia32 --icon=src/assets/images/favicon.ico",
-    "pack:win64": "electron-packager . ytmp3 --out=dist/win --platform=win32 --arch=x64 app-version=6.3 --icon=src/assets/images/favicon.ico",
+    "pack:win64": "electron-packager . yt2mp3 --out=dist/win --platform=win32 --arch=x64 app-version=6.3 --icon=src/assets/images/favicon.ico",
     "build": "npm run pack:win32 && npm run pack:win64"
   },
   "keywords": [],
