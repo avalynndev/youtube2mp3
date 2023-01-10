@@ -34,13 +34,17 @@ closeBtn.addEventListener("click", () => {
     ipc.send("closeApp")
 })
 
+var element = document.getElementById("mySidebar");
+
+
 // toggle menu
 showHideMenus.addEventListener("click", () => {
     if (isLeftMenuActive) {
+        this.closest(element).remove();
         mySidebar.style.width = "0px"
         isLeftMenuActive = false
     } else {
-        mySidebar.style.width = "280px"
+        mySidebar.style.width = "420px"
         isLeftMenuActive = true
     }
 })

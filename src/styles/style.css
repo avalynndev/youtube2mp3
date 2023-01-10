@@ -8,6 +8,160 @@ body {
   background-color: #2c313c;
 }
 
+.bn44 {
+  width: 160px;
+  height: 60px;
+}
+a {
+  text-decoration: none;
+}
+
+.button-6 {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: 240;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poiret+One&family=Roboto:wght@100;300&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f9fafb;
+  background-image: linear-gradient(315deg, #f9fafb 0%, #f9fafb 74%);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#download {
+  background-color: #7cffcb;
+  background-image: linear-gradient(315deg, #65cea4 0%, #51a890 74%);
+  border: none;
+  color: white;
+  padding: 19px 30px;
+  text-align: center;
+  text-decoration: wavy;
+  display: inline-block;
+  font-size: 21px;
+  margin: 70px 0px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bolder;
+}
+
+p {
+  font-family: 'Indie Flower', cursive;
+  font-size: larger;
+}
+
+input {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 2px;
+  padding: 16px 30px;
+  margin: 30px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  font-size: 24px;
+}
+
+input::placeholder {
+  font: 22px/3;
+  font-family: "Roboto", sans-serif;
+}
+
+button:hover {
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+div.container {
+  text-align: center;
+}
+
+ul.github {
+  display: inline-block;
+  text-align: center;
+}
+
+div.title {
+  text-align: center;
+}
+
+ul.title {
+  display: inline-block;
+  text-align: center;
+}
+
+
+input:focus {
+  border: 3px solid #555;
+}
+
+iframe {
+  border-radius: 10px;
+  scroll-behavior: none;
+  border: none;
+  overflow: hidden;
+  min-height: 380px;
+  height: 380px;
+  background-color: transparent;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
 /* app base */
 .mainApp {
   display: flex;
@@ -130,7 +284,7 @@ body {
 }
 
 .contentArea > .leftMenu {
-  width: 280px;
+  width: 420px;
   height: 100%;
   background-color: #272c36;
   transition: 0.4s;
