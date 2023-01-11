@@ -4,8 +4,6 @@ import { MdOpenInNew } from "react-icons/md";
 import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Home() {
@@ -15,7 +13,6 @@ export default function Home() {
       setVisit(result.value);
     });
   }, []);
-  const myFunction = () => toast.info(`Not Working? Taking too long? Go check out the alternative on the top-right corner.`);
   return (
     <>
       <Head>
@@ -33,22 +30,10 @@ export default function Home() {
       <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
         <h1 className="text-gray-900 pb-10">
           Convert any <span className="text-blue-500">Youtube Video</span> to{" "}
-          <span className="text-blue-400">Audio </span>
+          <span className="text-blue-400">Mp3 </span>
         </h1>
       </div>
       <main>
-        <ToastContainer
-          position="bottom-left"
-          autoClose={50000}
-          hideProgressBar
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-        />
         <br />
         <div>
           <input
@@ -67,7 +52,7 @@ export default function Home() {
             id="buttonApi"
             src=""
             width="50%"
-            height="30%"
+            height="60%"
           ></iframe>
           <br />
         </center>
