@@ -4,7 +4,9 @@
 @import url('https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
-
+h4{
+  font-size: 40px
+}
 
 .main-wrapper{
   height: 100vh;

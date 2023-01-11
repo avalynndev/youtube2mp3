@@ -29,8 +29,8 @@ export default function Home() {
       <Navbar />
       <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
       <h1 className="text-gray-900 pb-10">
-       Alternative to the <span className="text-blue-500">Youtube </span> to{" "}
-        <span className="text-blue-400">Mp3 Converter</span>
+       Enter only the <span className="text-red-500">Video ID </span> not the{" "}
+        <span className="text-red-400">URL</span>
       </h1>
       <div>
         <input
@@ -43,6 +43,13 @@ export default function Home() {
           Download
         </button>
       </div>
+        <h4 className="text-pink-400 pb-10">
+          Example:{" "}
+          <span className="text-blue-400">Only paste this:</span>
+        </h4>
+       
+        <img src="https://raw.githubusercontent.com/avalynndev/youtube2mp3/64309269471dacceb2170b49bf9865956bdee4ea/public/example.png"></img>
+        <br />
     </div>
       <main>
         <Visits visit={visit} />
