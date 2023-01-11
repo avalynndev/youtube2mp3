@@ -32,10 +32,10 @@ function Navbar() {
                     Audio Cutter
                   </a>
                   <a
-                    href="mediainfo"
+                    href="download"
                     className="cursor-pointer hover:bg-blue-600 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Media Info
+                    Download Offline Version
                   </a>
                   <a
                     href="/youtube2mp3"
@@ -122,10 +122,10 @@ function Navbar() {
                 </a>
 
                 <a
-                  href="/mediainfo"
+                  href="/download"
                   className="cursor-pointer hover:bg-blue-600 text-black hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Media Info
+                  Download Offline Version
                 </a>
                 <a
                   href="/youtube2mp3"

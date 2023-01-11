@@ -4,6 +4,93 @@
 @import url('https://demos.creative-tim.com/argon-design-system/assets/css/argon-design-system.min.css?v=1.2.0');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
+
+
+.main-wrapper{
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vertical-center{
+  width: 700px;
+}
+.title-wrapper{
+  width: 520px;
+  text-align: center;
+  margin: 0px auto;
+}
+.title-wrapper h1{
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 1.1em;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.title-wrapper h1 img{
+  vertical-align: bottom;
+  height: 4rem;
+}
+.title-wrapper h3{
+  font-weight: 100;
+  font-size: 1.8em;
+  line-height: 1.1em;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  color: gray;
+}
+.title-wrapper > span{
+  margin-bottom: 12px;
+  display: block;
+}
+.title-wrapper #version_insert{
+  font-weight: bold;
+}
+.dl-panel{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.download-btn{
+  background: #231f1f;
+  border: 1px solid #2d2d2d;
+  border-radius: 10px;
+  padding: 10px 36px;
+  padding-left: 28px;
+  color: #aeaeae;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: 0.3s;
+  margin-top: 2px;				
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+.download-btn:hover{
+  background: #3a3535;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+.download-btn strong{
+  color: white;
+  font-size: 1rem;
+}
+.download-btn svg{
+  color: white;
+  width: 25px;
+  height: 25px;
+  vertical-align: bottom;
+  margin-right: 12px;
+}
+.demo{
+  width: 100%;
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 0;
