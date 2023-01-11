@@ -1,5 +1,5 @@
 import React from "react";
-const feather = require('./res/js/feather.min.js')
+const feather = require('../lib/feather.min.js')
 import Head from "next/head";
 import Visits from "../components/Visits";
 import Navbar from "../components/Navbar";
