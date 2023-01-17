@@ -126,35 +126,6 @@ p {
   font-weight: bolder;
 }
 
-input {
-  width: 50%;
-  font-family: "Roboto", sans-serif;
-  font-size: 24px;
-  padding: 16px 30px;
-  margin: 30px 10px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 800px;
-}
-
-input[type="text"] {
-  font-size: 24px;
-  background-color: #374151;
-}
-
-input,
-select,
-textarea {
-  color: white;
-}
-
-input::placeholder {
-  font: 22px/3;
-  font-family: "Roboto", sans-serif;
-}
-
 iframe {
   border-radius: 10px;
   scroll-behavior: none;

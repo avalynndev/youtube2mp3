@@ -5,7 +5,6 @@ import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
 
-
 export default function Home() {
   const [visit, setVisit] = useState(0);
   useEffect(() => {
@@ -35,29 +34,43 @@ export default function Home() {
       </div>
       <main>
         <br />
-        <div>
-          <input
-            type="text"
-            placeholder="Input your youtube video url"
-            name="URL"
-            id="youtubelink"
-          />
-          <button type="button" onClick={myFunction} id="button">
-            Download
-          </button>
-        </div>
+        <center>
+          <div className="w-full max-w-xs">
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+              <div className="mb-4">
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="youtubelink"
+                  type="text"
+                  placeholder="Input your youtube video url"
+                />
+              </div>
+              <div className="flex items-center justify-between">
+                <button
+                  className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                  type="button"
+                  onClick={myFunction}
+                >
+                  Download
+                </button>
+                <a
+                  className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                  href="/youtube2mp3"
+                >
+                  Alternative?
+                </a>
+              </div>
+            </form>
+          </div>
+        </center>
         <center>
           <br />
-          <iframe
-            id="buttonApi"
-            src=""
-            width="50%"
-            height="60%"
-          ></iframe>
+          <iframe id="buttonApi" src="" width="50%" height="60%"></iframe>
           <br />
         </center>
         <Visits visit={visit} />
-        <br /><br />
+        <br />
+        <br />
       </main>
     </>
   );
@@ -65,9 +78,11 @@ export default function Home() {
 
 function myFunction() {
   if (document.getElementById != null) {
-    let link = (document.getElementById("youtubelink") as HTMLInputElement).value
+    let link = (document.getElementById("youtubelink") as HTMLInputElement)
+      .value;
     console.log(link);
-    document.getElementById("buttonApi")!.setAttribute('src', "https://yt2mp3.co/api/button/mp3?url=" + link)
+    document
+      .getElementById("buttonApi")!
+      .setAttribute("src", "https://yt2mp3.co/api/single/mp3?url=" + link);
   }
 }
-

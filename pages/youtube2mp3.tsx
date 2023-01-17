@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-      <meta charSet="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Youtube to Mp3</title>
@@ -28,29 +28,27 @@ export default function Home() {
       </Head>
       <Navbar />
       <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
-      <h1 className="text-gray-900 pb-10">
-       Enter only the <span className="text-red-500">Video ID </span> not the{" "}
-        <span className="text-red-400">URL</span>
-      </h1>
-      <div>
-        <input
-          type="text"
-          placeholder="Input your youtube video id"
-          name="URL"
-          id="youtubeid"
-        />
-        <button type="button" onClick={myFunction} id="button">
-          Download
-        </button>
-      </div>
+        <h1 className="text-gray-900 pb-10">
+          Enter only the <span className="text-red-500">Video ID </span> not the{" "}
+          <span className="text-red-400">URL</span>
+        </h1>
+        <div>
+          <input
+            type="text"
+            placeholder="Input your youtube video id"
+            name="URL"
+            id="youtubeid"
+          />
+          <button type="button" onClick={myFunction} id="button">
+            Download
+          </button>
+        </div>
         <h4 className="text-pink-400 pb-10">
-          Example:{" "}
-          <span className="text-blue-400">Only paste this:</span>
+          Example: <span className="text-blue-400">Only paste this:</span>
         </h4>
-       
         <img src="https://raw.githubusercontent.com/avalynndev/youtube2mp3/64309269471dacceb2170b49bf9865956bdee4ea/public/example.png"></img>
         <br />
-    </div>
+      </div>
       <main>
         <Visits visit={visit} />
       </main>
