@@ -23,6 +23,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.7",
     "@next/font": "13.1.1",
+    "@nextui-org/react": "^1.0.0-beta.12",
     "@types/react-dom": "18.0.10",
     "countapi-js": "^1.0.2",
     "https": "^1.0.0",

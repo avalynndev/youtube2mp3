@@ -32,25 +32,68 @@ export default function Home() {
           Enter only the <span className="text-red-500">Video ID </span> not the{" "}
           <span className="text-red-400">URL</span>
         </h1>
-        <div>
-          <input
-            type="text"
-            placeholder="Input your youtube video id"
-            name="URL"
-            id="youtubeid"
-          />
-          <button type="button" onClick={myFunction} id="button">
-            Download
-          </button>
-        </div>
-        <h4 className="text-pink-400 pb-10">
-          Example: <span className="text-blue-400">Only paste this:</span>
-        </h4>
-        <img src="https://raw.githubusercontent.com/avalynndev/youtube2mp3/64309269471dacceb2170b49bf9865956bdee4ea/public/example.png"></img>
-        <br />
       </div>
       <main>
+        <div>
+          <center>
+            <div className="w-full max-w-xs">
+              <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div className="mb-4">
+                  <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-white-700 leading-tight focus:outline-none focus:shadow-outline"
+                    type="text"
+                    placeholder="Input your youtube video id"
+                    name="URL"
+                    id="youtubeid"
+                  />
+                  <br /> <br />
+                  <div className="flex items-center justify-center">
+                    <button
+                      className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      type="button"
+                      onClick={myFunction}
+
+                    >
+                      Download
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </center>
+        </div>
+        <center>
+          <h4 className="text-pink-400 pb-10">
+            Example: <span className="text-blue-400">Only paste this:</span>
+          </h4>
+          <img src="https://raw.githubusercontent.com/avalynndev/youtube2mp3/64309269471dacceb2170b49bf9865956bdee4ea/public/example.png"></img>
+        </center>
+        <br />
         <Visits visit={visit} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <footer className="p-4 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="/" className="hover:underline">Yt2mp3.is-an.app™</a>. All Rights Reserved.
+          </span>
+          <ul className="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+              <a href="#" className="mr-4 hover:underline md:mr-6">Another Link</a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">Feeback</a>
+            </li>
+          </ul>
+        </footer>
       </main>
     </>
   );

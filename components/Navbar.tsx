@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-
+import Link from "next/link";
 import Image from "next/image";
 
 function Navbar() {
@@ -11,12 +11,12 @@ function Navbar() {
         <div className="w-full">
           <div className="flex items-center h-20 w-full">
             <div className="flex items-center  mx-20  justify-between w-full">
-              <div className="flex justify-center items-center flex-shrink-0 ">
+              <Link href="/" className="flex justify-center items-center flex-shrink-0 ">
                 <img src="/website_icon.png" width="35" height="35" />
-                <h1 className=" font-bold text-xl cursor-pointer">
+                <h1 className="text-black-500 font-bold text-xl cursor-pointer">
                   Youtube2<span className="text-blue-500">mp3</span>
                 </h1>
-              </div>
+              </Link>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <a
