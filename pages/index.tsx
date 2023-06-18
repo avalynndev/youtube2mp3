@@ -1,16 +1,17 @@
 import Head from "next/head";
-import Visits from "../components/Visits";
 import { useEffect, useState } from "react";
 import countapi from "countapi-js";
+// import Visits from "../components/Visits";
 
 export default function Home() {
-  const [visit, setVisit] = useState(0);
+  /** const [visit, setVisit] = useState(0);
+
   useEffect(() => {
     countapi.update("yt2mp3", "visits", 1).then((result) => {
       console.log(result.value);
       setVisit(result.value);
     });
-  }, []);
+  }, []); **/
   return (
     <>
       <Head>
@@ -24,7 +25,6 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Visits visit={visit} />
       <div className="flex justify-center items-center flex-col pt-40 text-center font-bold lg:text-8xl text-6xl space-y-2">
         <h1 className="text-black pb-10">
           Convert any <span className="text-red-400">Video</span> to

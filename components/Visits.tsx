@@ -1,3 +1,4 @@
+/**
 import React from "react";
 
 const Visits = ({ visit }: any) => {
@@ -9,3 +10,5 @@ const Visits = ({ visit }: any) => {
 };
 
 export default Visits;
+
+**/
